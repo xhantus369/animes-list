@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
-router.get("/", (_req, res) =>{
-    return res.send("Hello");
-});
+const controler = require('./controlers/animesControler')
+
+router.get("/", controler.getAnime);
 
 module.exports = router;
